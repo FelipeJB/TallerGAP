@@ -1,0 +1,22 @@
+{
+  "name": "shoppingautomation",
+  "version": "1.0.0",
+  "description": "E2E tests for shopping plattform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeJB/TallerGAP.git"
+  },
+  "author": "Felipe Jimenez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelipeJB/TallerGAP/issues"
+  },
+  "homepage": "https://github.com/FelipeJB/TallerGAP#readme",
+  "devDependencies": {
+    "cypress": "^5.2.0"
+  }
+}

@@ -1,0 +1,7 @@
+#Dependencies directories
+node_modules/
+package-lock.json
+
+#Cypress data
+cypress/screenshots
+cypress/video
