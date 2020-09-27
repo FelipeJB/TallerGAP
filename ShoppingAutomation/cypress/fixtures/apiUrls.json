@@ -1,0 +1,4 @@
+{
+  "getProductByName" : "/product/",
+  "getProduct" : "/wp-json/wc/v3/products"
+}
