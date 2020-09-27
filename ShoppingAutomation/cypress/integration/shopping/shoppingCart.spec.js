@@ -1,9 +1,5 @@
 import { productsApi } from "../../support/api/apis"
-import { productPageServices } from "../../support/services/pageServices"
-
-//Cypress.on('uncaught:exception', (err, runable) => {
-//  return false;
-//});
+import { productPageServices, headerPageServices, cartPageServices } from "../../support/services/pageServices"
 
 context('Shopping Cart General Checks', () => {
   before(() => {
@@ -18,21 +14,24 @@ context('Shopping Cart General Checks', () => {
   })
 
   it('Product page correctly displayed', () => {
-    cy.fixture('appUrls.json').then((urls) => {
-      cy.fixture('products.json').then((products) => {
-        cy.visit(urls.productPage + products[0].name);   
-      });      
-    });
-    
+    productPageServices.navigateToProductPage(0);    
     productPageServices.isCorrectlyDisplayed();
   })
 
   it('Product ammount displaying updated number', () => {
-    
+    productPageServices.navigateToProductPage(0);    
+    productPageServices.setAddToCartAmmount(7);   
   })
 
   it('Product correctly added to cart', () => {
-    
+    productPageServices.navigateToProductPage(0);
+    productPageServices.addProductToCart(7);
+    productPageServices.addedToCartMessageCorrectlyDisplayed(0, 7);
+    headerPageServices.cartAmmountCorrectlyDisplayed(7);
+    headerPageServices.goToShoppingCart();
+    cartPageServices.isCorrectlyDisplayedNotEmpty();
+    cartPageServices.isCorrectlyDisplayedNotEmpty();
+    cartPageServices.isProductOnCart(0, 7);
   })
 
   after(() => {

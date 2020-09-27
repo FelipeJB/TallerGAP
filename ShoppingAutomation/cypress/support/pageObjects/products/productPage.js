@@ -1,4 +1,5 @@
 module.exports = {
+  transactionMessage : '.woocommerce-message',
   productTitle : '.product_title',
   productPrice : '.summary .price',
   productShortDescription : '.woocommerce-product-details__short-description',

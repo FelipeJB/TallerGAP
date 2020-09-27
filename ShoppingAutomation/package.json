@@ -4,7 +4,8 @@
   "description": "E2E tests for shopping plattform",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:run": "./node_modules/.bin/cypress run --browser=chrome",
+    "cy:run:headless": "./node_modules/.bin/cypress run"
   },
   "repository": {
     "type": "git",
